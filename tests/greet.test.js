@@ -1,3 +1,4 @@
+localStorage.clear()
 describe('Greet Exercise', () => {
     it('Should collect username input', () => {
         var func = makeChanges();
