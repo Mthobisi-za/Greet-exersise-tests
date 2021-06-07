@@ -23,15 +23,12 @@ describe('Greet Exercise', () => {
             func.setUserName("Mtho");
             assert.equal("Dumela", func.setUserLang("Sesotho"));
         })
-        ///dealing with local storage tests
-    it("should be able to store data on to our local storage", () => {
+   
+    it("should be able to recognize that the name Jack already exist", () => {
         var func = makeChanges();
         func.setUserName("Jack");
         func.setUserLang("Isizulu");
-        assert.equal(func.storeNames(), "jack");
-    });
-    it("should be able to recognize that the name Jack already exist", () => {
-        var func = makeChanges();
+        func.storeNames();
         func.setUserName("Jack");
         func.setUserLang("Isizulu");
         assert.equal(func.storeNames(), "already exist");
